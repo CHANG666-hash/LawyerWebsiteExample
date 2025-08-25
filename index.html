@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>張德謙律師事務所 | 專業法律諮詢服務</title>
+    <meta name="description" content="張德謙律師事務所提供專業法律諮詢，專精民事訴訟、刑事辯護、公司法務、智慧財產權等領域">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 導航列 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>張德謙律師事務所</h2>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">首頁</a>
+                <a href="#services" class="nav-link">服務項目</a>
+                <a href="#about-lawyer" class="nav-link">關於律師</a>
+                <a href="#about-firm" class="nav-link">關於事務所</a>
+                <a href="#victories" class="nav-link">成功案例</a>
+                <a href="#testimonials" class="nav-link">客戶見證</a>
+                <a href="#legal-knowledge" class="nav-link">法律知識</a>
+            </div>
+            <button class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 首頁區塊 -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">專業法律服務 <span class="highlight">值得信賴</span></h1>
+                <p class="hero-subtitle">二十年豐富執業經驗，為您提供最專業的法律諮詢與代理服務</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" id="appointment-btn">立即預約諮詢</button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('about-lawyer')">瞭解更多</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="張律師.png" alt="張德謙律師" class="lawyer-photo">
+            </div>
+        </div>
+    </section>
+
+    <!-- 服務項目 -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">專業服務項目</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>民事訴訟</h3>
+                    <p>處理各類民事糾紛，包括契約糾紛、侵權損害賠償、債權債務等案件</p>
+                    <button class="consult-btn" onclick="openConsultModal('民事訴訟')">馬上諮詢</button>
+                </div>
+                <div class="service-card">
+                    <h3>刑事辯護</h3>
+                    <p>專業刑事案件辯護，維護當事人合法權益，確保程序正義</p>
+                    <button class="consult-btn" onclick="openConsultModal('刑事辯護')">馬上諮詢</button>
+                </div>
+                <div class="service-card">
+                    <h3>公司法務</h3>
+                    <p>企業法律顧問服務，包括公司設立、合約審查、併購重組等</p>
+                    <button class="consult-btn" onclick="openConsultModal('公司法務')">馬上諮詢</button>
+                </div>
+                <div class="service-card">
+                    <h3>智慧財產權</h3>
+                    <p>專利、商標、著作權等智慧財產權保護與爭議處理</p>
+                    <button class="consult-btn" onclick="openConsultModal('智慧財產權')">馬上諮詢</button>
+                </div>
+                <div class="service-card">
+                    <h3>房地產法律</h3>
+                    <p>不動產買賣、租賃、開發建設等相關法律事務</p>
+                    <button class="consult-btn" onclick="openConsultModal('房地產法律')">馬上諮詢</button>
+                </div>
+                <div class="service-card">
+                    <h3>家事法律</h3>
+                    <p>離婚訴訟、監護權、遺產繼承等家庭法律問題</p>
+                    <button class="consult-btn" onclick="openConsultModal('家事法律')">馬上諮詢</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 關於律師 -->
+    <section id="about-lawyer" class="about-lawyer">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">關於張德謙律師</h2>
+                    <div class="lawyer-info">
+                        <h3>專業資歷</h3>
+                        <ul class="credentials-list">
+                            <li>台灣大學法律系學士</li>
+                            <li>哈佛大學法學院LL.M.</li>
+                            <li>執業律師二十年</li>
+                            <li>台北律師公會會員</li>
+                            <li>中華民國仲裁協會仲裁人</li>
+                        </ul>
+                        
+                        <h3>專業領域</h3>
+                        <div class="expertise-tags">
+                            <span class="tag">民事訴訟</span>
+                            <span class="tag">刑事辯護</span>
+                            <span class="tag">公司法務</span>
+                            <span class="tag">智慧財產權</span>
+                            <span class="tag">房地產法</span>
+                            <span class="tag">家事法律</span>
+                        </div>
+                        
+                        <h3>執業理念</h3>
+                        <p class="philosophy">「以專業為根本，以誠信為準則」，致力於為每位委託人提供最優質的法律服務，以豐富的實務經驗與深厚的法學素養，為您的權益保駕護航。</p>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="lawyer-portrait">
+                        <img src="張律師.png" alt="張德謙律師" class="lawyer-photo-large">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 關於事務所 -->
+    <section id="about-firm" class="about-firm">
+        <div class="container">
+            <h2 class="section-title">關於事務所</h2>
+            <div class="firm-info">
+                <div class="firm-card">
+                    <h3>成立宗旨</h3>
+                    <p>張德謙律師事務所成立於2004年，以提供專業、高效、誠信的法律服務為宗旨，致力於成為客戶最信賴的法律夥伴。</p>
+                </div>
+                <div class="firm-card">
+                    <h3>服務特色</h3>
+                    <ul>
+                        <li>24小時緊急法律諮詢服務</li>
+                        <li>客製化法律解決方案</li>
+                        <li>多語言服務能力</li>
+                        <li>豐富的跨國案件處理經驗</li>
+                    </ul>
+                </div>
+                <div class="firm-card">
+                    <h3>聯絡資訊</h3>
+                    <div class="contact-info">
+                        <p><strong>地址：</strong>台北市中正區重慶南路一段122號8樓</p>
+                        <p><strong>電話：</strong>(02) 2388-9999</p>
+                        <p><strong>傳真：</strong>(02) 2388-9998</p>
+                        <p><strong>Email：</strong>info@changlaw.com.tw</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 成功案例 -->
+    <section id="victories" class="victories">
+        <div class="container">
+            <h2 class="section-title">勝訴判決 <span class="highlight">成功案例</span></h2>
+            <div class="victories-grid">
+                <div class="victory-card">
+                    <div class="case-number">案件編號：109年度重訴字第1234號</div>
+                    <h3>重大商業糾紛勝訴</h3>
+                    <p class="case-amount">勝訴金額：新台幣 3,500 萬元</p>
+                    <p class="case-description">成功為委託人爭取商業合約違約損害賠償，全額勝訴。</p>
+                    <div class="case-date">判決日期：2020年12月</div>
+                </div>
+                <div class="victory-card">
+                    <div class="case-number">案件編號：110年度上字第5678號</div>
+                    <h3>智慧財產權侵權案</h3>
+                    <p class="case-amount">勝訴金額：新台幣 1,200 萬元</p>
+                    <p class="case-description">專利侵權訴訟二審逆轉勝，成功維護委託人智慧財產權。</p>
+                    <div class="case-date">判決日期：2021年8月</div>
+                </div>
+                <div class="victory-card">
+                    <div class="case-number">案件編號：111年度訴字第9101號</div>
+                    <h3>不動產糾紛勝訴</h3>
+                    <p class="case-amount">勝訴金額：新台幣 8,000 萬元</p>
+                    <p class="case-description">大型不動產開發糾紛，成功為建商爭取工程款及違約金。</p>
+                    <div class="case-date">判決日期：2022年3月</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 客戶見證與回饋 -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="section-title">客戶見證 <span class="highlight">與回饋</span></h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">"</div>
+                        <p>張律師在處理我的商業糾紛案件時展現了極高的專業素養，不僅為我爭取到滿意的賠償金額，更重要的是整個過程中的細心指導讓我深感安心。</p>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>王先生</h4>
+                                <span>科技業執行長</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rating">
+                        <span class="star">★★★★★</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">"</div>
+                        <p>面對複雜的智慧財產權訴訟，張律師以其深厚的法學基礎和豐富的實戰經驗，成功協助我們公司維護了核心專利權益，真正值得信賴的專業夥伴。</p>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>李女士</h4>
+                                <span>製藥公司法務長</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rating">
+                        <span class="star">★★★★★</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">"</div>
+                        <p>在家庭法律糾紛中，張律師不只是我的法律代理人，更像是我的心靈支柱。專業、耐心、同理心兼具，讓我在困難時期感受到溫暖與希望。</p>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>陳女士</h4>
+                                <span>企業主管</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rating">
+                        <span class="star">★★★★★</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">"</div>
+                        <p>張律師在我們公司併購案中展現的專業能力令人印象深刻，從盡職調查到合約談判，每個環節都處理得非常到位，是企業法務的最佳選擇。</p>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>林先生</h4>
+                                <span>建設公司董事長</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rating">
+                        <span class="star">★★★★★</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">"</div>
+                        <p>刑事案件的辯護過程中，張律師展現了卓越的法庭技巧和縝密的邏輯思維，最終獲得無罪判決。專業、負責、值得託付！</p>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>黃先生</h4>
+                                <span>貿易商</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rating">
+                        <span class="star">★★★★★</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">"</div>
+                        <p>房地產交易糾紛讓我們焦頭爛額，幸好有張律師的專業協助。從契約審查到訴訟策略，每一步都為我們爭取最大利益，真的太感謝了！</p>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>吳女士</h4>
+                                <span>投資公司經理</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rating">
+                        <span class="star">★★★★★</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-stats">
+                <div class="stat-item">
+                    <div class="stat-number" data-count="500">500</div>
+                    <div class="stat-label">成功案件</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="98">98</div>
+                    <div class="stat-label">客戶滿意度 %</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="20">20</div>
+                    <div class="stat-label">執業年資</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="15">15</div>
+                    <div class="stat-label">億元勝訴金額</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 法律知識 -->
+    <section id="legal-knowledge" class="legal-knowledge">
+        <div class="container">
+            <h2 class="section-title">法律知識專欄</h2>
+            <div class="knowledge-grid">
+                <article class="knowledge-card">
+                    <h3>民事訴訟程序須知</h3>
+                    <p>了解民事訴訟的基本程序，從起訴到判決執行的完整流程，以及當事人應注意的重要事項。</p>
+                    <a href="#" class="read-more">閱讀更多</a>
+                </article>
+                <article class="knowledge-card">
+                    <h3>公司法修正重點</h3>
+                    <p>最新公司法修正條文解析，包括董事責任、股東權益保護等重要變更內容。</p>
+                    <a href="#" class="read-more">閱讀更多</a>
+                </article>
+                <article class="knowledge-card">
+                    <h3>智慧財產權保護策略</h3>
+                    <p>如何有效保護您的智慧財產權，從申請程序到侵權救濟的完整指南。</p>
+                    <a href="#" class="read-more">閱讀更多</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 頁尾 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>張德謙律師事務所</h3>
+                    <p>專業法律服務，值得您的信賴</p>
+                </div>
+                <div class="footer-section">
+                    <h4>聯絡方式</h4>
+                    <p>電話：(02) 2388-9999</p>
+                    <p>地址：台北市中正區重慶南路一段122號8樓</p>
+                </div>
+                <div class="footer-section">
+                    <h4>服務時間</h4>
+                    <p>週一至週五：09:00-18:00</p>
+                    <p>週六：09:00-12:00</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 張德謙律師事務所. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LINE 按鈕 -->
+    <div class="line-button" id="line-button">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg" alt="LINE" class="line-icon">
+    </div>
+
+    <!-- 預約諮詢 Modal -->
+    <div class="modal" id="appointment-modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-modal">&times;</span>
+            <h3>預約法律諮詢</h3>
+            <form class="appointment-form">
+                <div class="form-group">
+                    <label for="name">姓名</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">聯絡電話</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">電子郵件</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="case-type">案件類型</label>
+                    <select id="case-type" name="case-type" required>
+                        <option value="">請選擇</option>
+                        <option value="civil">民事訴訟</option>
+                        <option value="criminal">刑事辯護</option>
+                        <option value="corporate">公司法務</option>
+                        <option value="ip">智慧財產權</option>
+                        <option value="real-estate">房地產法律</option>
+                        <option value="family">家事法律</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">案件說明</label>
+                    <textarea id="message" name="message" rows="4" placeholder="請簡述您的法律問題..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">提交預約</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>張德謙律師事務所 | 專業法律諮詢服務</title>
+    <meta name="description" content="張德謙律師事務所提供專業法律諮詢，專精民事訴訟、刑事辯護、公司法務、智慧財產權等領域">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Noto Sans TC', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary-blue': '#1e3a8a',
+                        'secondary-blue': '#3b82f6',
+                        'light-blue': '#dbeafe',
+                        'dark-blue': '#1e40af',
+                        'accent-blue': '#60a5fa',
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.6s ease-out',
+                        'fade-in-right': 'fadeInRight 0.6s ease-out',
+                        'fade-in-left': 'fadeInLeft 0.6s ease-out',
+                        'bounce-in': 'bounceIn 0.8s ease-out',
+                        'pulse-slow': 'pulse 3s infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': {
+                                opacity: '0',
+                                transform: 'translateY(30px)'
+                            },
+                            '100%': {
+                                opacity: '1',
+                                transform: 'translateY(0)'
+                            }
+                        },
+                        fadeInRight: {
+                            '0%': {
+                                opacity: '0',
+                                transform: 'translateX(-30px)'
+                            },
+                            '100%': {
+                                opacity: '1',
+                                transform: 'translateX(0)'
+                            }
+                        },
+                        fadeInLeft: {
+                            '0%': {
+                                opacity: '0',
+                                transform: 'translateX(30px)'
+                            },
+                            '100%': {
+                                opacity: '1',
+                                transform: 'translateX(0)'
+                            }
+                        },
+                        bounceIn: {
+                            '0%': {
+                                opacity: '0',
+                                transform: 'scale(0.3)'
+                            },
+                            '50%': {
+                                opacity: '1',
+                                transform: 'scale(1.05)'
+                            },
+                            '70%': {
+                                transform: 'scale(0.95)'
+                            },
+                            '100%': {
+                                opacity: '1',
+                                transform: 'scale(1)'
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans">
+    <!-- 導航列 -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-lg border-b border-gray-200 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold text-primary-blue">張德謙律師事務所</a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="text-gray-700 hover:text-secondary-blue px-3 py-2 text-sm font-medium transition-colors duration-200 relative group">
+                            首頁
+                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary-blue transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+                        <a href="services-tailwind.html" class="text-gray-700 hover:text-secondary-blue px-3 py-2 text-sm font-medium transition-colors duration-200 relative group">
+                            服務項目
+                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary-blue transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+                        <a href="about-lawyer-tailwind.html" class="text-gray-700 hover:text-secondary-blue px-3 py-2 text-sm font-medium transition-colors duration-200 relative group">
+                            關於律師
+                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary-blue transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+                        <a href="about-firm-tailwind.html" class="text-gray-700 hover:text-secondary-blue px-3 py-2 text-sm font-medium transition-colors duration-200 relative group">
+                            關於事務所
+                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary-blue transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+                        <a href="#victories" class="text-gray-700 hover:text-secondary-blue px-3 py-2 text-sm font-medium transition-colors duration-200 relative group">
+                            成功案例
+                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary-blue transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+                        <a href="#testimonials" class="text-gray-700 hover:text-secondary-blue px-3 py-2 text-sm font-medium transition-colors duration-200 relative group">
+                            客戶見證
+                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary-blue transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+                        <a href="legal-knowledge-tailwind.html" class="text-gray-700 hover:text-secondary-blue px-3 py-2 text-sm font-medium transition-colors duration-200 relative group">
+                            法律知識
+                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary-blue transition-all duration-300 group-hover:w-full"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button type="button" class="bg-gray-100 inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-secondary-blue hover:bg-gray-200 transition-colors duration-200" id="mobile-menu-button">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- 手機版選單 -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
+                <a href="#home" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-secondary-blue hover:bg-gray-50">首頁</a>
+                <a href="services-tailwind.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-secondary-blue hover:bg-gray-50">服務項目</a>
+                <a href="about-lawyer-tailwind.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-secondary-blue hover:bg-gray-50">關於律師</a>
+                <a href="about-firm-tailwind.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-secondary-blue hover:bg-gray-50">關於事務所</a>
+                <a href="#victories" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-secondary-blue hover:bg-gray-50">成功案例</a>
+                <a href="#testimonials" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-secondary-blue hover:bg-gray-50">客戶見證</a>
+                <a href="legal-knowledge-tailwind.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-secondary-blue hover:bg-gray-50">法律知識</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 首頁英雄區塊 -->
+    <section id="home" class="relative min-h-screen flex items-center overflow-hidden">
+        <!-- 背景圖片 -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                 alt="Modern Law Office" 
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-primary-blue/90 via-primary-blue/70 to-transparent"></div>
+        </div>
+        
+        <!-- 內容 -->
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="text-white animate-fade-in-right">
+                    <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
+                        專業法律服務
+                        <span class="block text-accent-blue bg-gradient-to-r from-accent-blue to-white bg-clip-text text-transparent">值得信賴</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed">
+                        二十年豐富執業經驗，為您提供最專業的法律諮詢與代理服務
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button onclick="openAppointmentModal()" class="bg-secondary-blue hover:bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+                            立即預約諮詢
+                        </button>
+                        <a href="#about-lawyer" class="border-2 border-white text-white hover:bg-white hover:text-primary-blue px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 text-center">
+                            瞭解更多
+                        </a>
+                    </div>
+                </div>
+                <div class="relative animate-fade-in-left">
+                    <div class="relative">
+                        <img src="張律師.png" 
+                             alt="張德謙律師" 
+                             class="w-full max-w-md mx-auto rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-300">
+                        <div class="absolute -top-4 -right-4 bg-secondary-blue text-white px-4 py-2 rounded-lg font-semibold animate-bounce-in">
+                            20年專業經驗
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 專業服務項目預覽 -->
+    <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">專業服務項目</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">提供全方位的法律服務，為您的權益保駕護航</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 民事訴訟 -->
+                <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-secondary-blue to-primary-blue relative">
+                        <img src="https://images.unsplash.com/photo-1589994965851-a8f479c573a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Civil Litigation" 
+                             class="w-full h-full object-cover opacity-20 group-hover:opacity-30 transition-opacity duration-300">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 2L3 7v11a1 1 0 001 1h12a1 1 0 001-1V7l-7-5zM6 18v-6h8v6H6z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-primary-blue mb-3">民事訴訟</h3>
+                        <p class="text-gray-600 leading-relaxed mb-4">處理各類民事糾紛，包括契約糾紛、侵權損害賠償、債權債務等案件</p>
+                        <button onclick="openConsultModal('民事訴訟')" class="w-full bg-gradient-to-r from-secondary-blue to-primary-blue text-white py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                            馬上諮詢
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 刑事辯護 -->
+                <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-red-500 to-red-700 relative">
+                        <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Criminal Defense" 
+                             class="w-full h-full object-cover opacity-20 group-hover:opacity-30 transition-opacity duration-300">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 1.944A11.954 11.954 0 012.166 5C2.056 5.649 2 6.319 2 7c0 5.225 3.34 9.67 8 11.317C14.66 16.67 18 12.225 18 7c0-.682-.057-1.35-.166-2.001A11.954 11.954 0 0110 1.944zM11 14a1 1 0 11-2 0 1 1 0 012 0zm0-7a1 1 0 10-2 0v3a1 1 0 102 0V7z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-primary-blue mb-3">刑事辯護</h3>
+                        <p class="text-gray-600 leading-relaxed mb-4">專業刑事案件辯護，維護當事人合法權益，確保程序正義</p>
+                        <button onclick="openConsultModal('刑事辯護')" class="w-full bg-gradient-to-r from-secondary-blue to-primary-blue text-white py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                            馬上諮詢
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 公司法務 -->
+                <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-green-500 to-green-700 relative">
+                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Corporate Law" 
+                             class="w-full h-full object-cover opacity-20 group-hover:opacity-30 transition-opacity duration-300">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4zM18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-primary-blue mb-3">公司法務</h3>
+                        <p class="text-gray-600 leading-relaxed mb-4">企業法律顧問服務，包括公司設立、合約審查、併購重組等</p>
+                        <button onclick="openConsultModal('公司法務')" class="w-full bg-gradient-to-r from-secondary-blue to-primary-blue text-white py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                            馬上諮詢
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 智慧財產權 -->
+                <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-purple-500 to-purple-700 relative">
+                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Intellectual Property" 
+                             class="w-full h-full object-cover opacity-20 group-hover:opacity-30 transition-opacity duration-300">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-primary-blue mb-3">智慧財產權</h3>
+                        <p class="text-gray-600 leading-relaxed mb-4">專利、商標、著作權等智慧財產權保護與爭議處理</p>
+                        <button onclick="openConsultModal('智慧財產權')" class="w-full bg-gradient-to-r from-secondary-blue to-primary-blue text-white py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                            馬上諮詢
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 房地產法律 -->
+                <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-yellow-500 to-yellow-700 relative">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Real Estate Law" 
+                             class="w-full h-full object-cover opacity-20 group-hover:opacity-30 transition-opacity duration-300">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.736 6.979C9.208 6.193 9.696 6 10 6c.304 0 .792.193 1.264.979a1 1 0 001.715-1.029C12.279 4.784 11.232 4 10 4s-2.279.784-2.979 1.95c-.285.475-.507 1-.67 1.55H6a1 1 0 000 2h.013a9.358 9.358 0 000 1H6a1 1 0 100 2h.351c.163.55.385 1.075.67 1.55C7.721 15.216 8.768 16 10 16s2.279-.784 2.979-1.95a1 1 0 10-1.715-1.029C10.792 13.807 10.304 14 10 14c-.304 0-.792-.193-1.264-.979a4.265 4.265 0 01-.264-.521H10a1 1 0 100-2H8.017a7.36 7.36 0 010-1H10a1 1 0 100-2H8.472c.08-.185.167-.36.264-.521z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-primary-blue mb-3">房地產法律</h3>
+                        <p class="text-gray-600 leading-relaxed mb-4">不動產買賣、租賃、開發建設等相關法律事務</p>
+                        <button onclick="openConsultModal('房地產法律')" class="w-full bg-gradient-to-r from-secondary-blue to-primary-blue text-white py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                            馬上諮詢
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 家事法律 -->
+                <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-pink-500 to-pink-700 relative">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Family Law" 
+                             class="w-full h-full object-cover opacity-20 group-hover:opacity-30 transition-opacity duration-300">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-primary-blue mb-3">家事法律</h3>
+                        <p class="text-gray-600 leading-relaxed mb-4">離婚訴訟、監護權、遺產繼承等家庭法律問題</p>
+                        <button onclick="openConsultModal('家事法律')" class="w-full bg-gradient-to-r from-secondary-blue to-primary-blue text-white py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                            馬上諮詢
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="services-tailwind.html" class="inline-flex items-center bg-primary-blue hover:bg-dark-blue text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105">
+                    查看所有服務
+                    <svg class="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 成功案例 -->
+    <section id="victories" class="py-20 bg-gradient-to-br from-primary-blue via-dark-blue to-primary-blue relative overflow-hidden">
+        <!-- 背景裝飾 -->
+        <div class="absolute inset-0 opacity-10">
+            <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                 alt="Background" 
+                 class="w-full h-full object-cover">
+        </div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-white mb-4">
+                    勝訴判決 <span class="text-accent-blue">成功案例</span>
+                </h2>
+                <p class="text-xl text-gray-200 max-w-3xl mx-auto">豐富的實戰經驗，為客戶爭取最大權益</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 案例 1 -->
+                <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-accent-blue text-sm font-medium mb-2">案件編號：109年度重訴字第1234號</div>
+                    <h3 class="text-xl font-semibold text-white mb-3">重大商業糾紛勝訴</h3>
+                    <div class="text-2xl font-bold text-yellow-400 mb-3">勝訴金額：新台幣 3,500 萬元</div>
+                    <p class="text-gray-200 mb-4 leading-relaxed">成功為委託人爭取商業合約違約損害賠償，全額勝訴。</p>
+                    <div class="text-gray-300 text-sm">判決日期：2020年12月</div>
+                </div>
+
+                <!-- 案例 2 -->
+                <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-accent-blue text-sm font-medium mb-2">案件編號：110年度上字第5678號</div>
+                    <h3 class="text-xl font-semibold text-white mb-3">智慧財產權侵權案</h3>
+                    <div class="text-2xl font-bold text-yellow-400 mb-3">勝訴金額：新台幣 1,200 萬元</div>
+                    <p class="text-gray-200 mb-4 leading-relaxed">專利侵權訴訟二審逆轉勝，成功維護委託人智慧財產權。</p>
+                    <div class="text-gray-300 text-sm">判決日期：2021年8月</div>
+                </div>
+
+                <!-- 案例 3 -->
+                <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-accent-blue text-sm font-medium mb-2">案件編號：111年度訴字第9101號</div>
+                    <h3 class="text-xl font-semibold text-white mb-3">不動產糾紛勝訴</h3>
+                    <div class="text-2xl font-bold text-yellow-400 mb-3">勝訴金額：新台幣 8,000 萬元</div>
+                    <p class="text-gray-200 mb-4 leading-relaxed">大型不動產開發糾紛，成功為建商爭取工程款及違約金。</p>
+                    <div class="text-gray-300 text-sm">判決日期：2022年3月</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 客戶見證 -->
+    <section id="testimonials" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">
+                    客戶見證 <span class="text-secondary-blue">與回饋</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">來自客戶的真實回饋與信任</p>
+            </div>
+
+            <!-- 客戶見證卡片 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <!-- 見證 1 -->
+                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 p-8">
+                    <div class="text-6xl text-secondary-blue mb-4 opacity-20">"</div>
+                    <p class="text-gray-700 leading-relaxed mb-6 italic">
+                        張律師在處理我的商業糾紛案件時展現了極高的專業素養，不僅為我爭取到滿意的賠償金額，更重要的是整個過程中的細心指導讓我深感安心。
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-secondary-blue rounded-full flex items-center justify-center text-white font-semibold mr-4">
+                            王
+                        </div>
+                        <div>
+                            <div class="font-semibold text-primary-blue">王先生</div>
+                            <div class="text-gray-500 text-sm">科技業執行長</div>
+                        </div>
+                    </div>
+                    <div class="flex mt-4">
+                        <span class="text-yellow-400 text-lg">★★★★★</span>
+                    </div>
+                </div>
+
+                <!-- 見證 2 -->
+                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 p-8">
+                    <div class="text-6xl text-secondary-blue mb-4 opacity-20">"</div>
+                    <p class="text-gray-700 leading-relaxed mb-6 italic">
+                        面對複雜的智慧財產權訴訟，張律師以其深厚的法學基礎和豐富的實戰經驗，成功協助我們公司維護了核心專利權益，真正值得信賴的專業夥伴。
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-secondary-blue rounded-full flex items-center justify-center text-white font-semibold mr-4">
+                            李
+                        </div>
+                        <div>
+                            <div class="font-semibold text-primary-blue">李女士</div>
+                            <div class="text-gray-500 text-sm">製藥公司法務長</div>
+                        </div>
+                    </div>
+                    <div class="flex mt-4">
+                        <span class="text-yellow-400 text-lg">★★★★★</span>
+                    </div>
+                </div>
+
+                <!-- 見證 3 -->
+                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 p-8">
+                    <div class="text-6xl text-secondary-blue mb-4 opacity-20">"</div>
+                    <p class="text-gray-700 leading-relaxed mb-6 italic">
+                        在家庭法律糾紛中，張律師不只是我的法律代理人，更像是我的心靈支柱。專業、耐心、同理心兼具，讓我在困難時期感受到溫暖與希望。
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-secondary-blue rounded-full flex items-center justify-center text-white font-semibold mr-4">
+                            陳
+                        </div>
+                        <div>
+                            <div class="font-semibold text-primary-blue">陳女士</div>
+                            <div class="text-gray-500 text-sm">企業主管</div>
+                        </div>
+                    </div>
+                    <div class="flex mt-4">
+                        <span class="text-yellow-400 text-lg">★★★★★</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 統計數據 -->
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-secondary-blue mb-2" id="cases-count">500</div>
+                        <div class="text-gray-600 font-medium">成功案件</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-secondary-blue mb-2" id="satisfaction-count">98</div>
+                        <div class="text-gray-600 font-medium">客戶滿意度 %</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-secondary-blue mb-2" id="experience-count">20</div>
+                        <div class="text-gray-600 font-medium">執業年資</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-secondary-blue mb-2" id="amount-count">15</div>
+                        <div class="text-gray-600 font-medium">億元勝訴金額</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 法律知識預覽 -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">法律知識專欄</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">分享實用的法律知識，幫助您了解法律權益</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 文章 1 -->
+                <article class="bg-gray-50 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="h-48 bg-gradient-to-br from-secondary-blue to-primary-blue">
+                        <img src="https://images.unsplash.com/photo-1589994965851-a8f479c573a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Civil Procedure" 
+                             class="w-full h-full object-cover opacity-30">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-primary-blue mb-3">民事訴訟程序須知</h3>
+                        <p class="text-gray-600 leading-relaxed mb-4">了解民事訴訟的基本程序，從起訴到判決執行的完整流程，以及當事人應注意的重要事項。</p>
+                        <a href="#" class="inline-flex items-center text-secondary-blue font-medium hover:text-primary-blue transition-colors">
+                            閱讀更多
+                            <svg class="ml-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- 文章 2 -->
+                <article class="bg-gray-50 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="h-48 bg-gradient-to-br from-green-500 to-green-700">
+                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Company Law" 
+                             class="w-full h-full object-cover opacity-30">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-primary-blue mb-3">公司法修正重點</h3>
+                        <p class="text-gray-600 leading-relaxed mb-4">最新公司法修正條文解析，包括董事責任、股東權益保護等重要變更內容。</p>
+                        <a href="#" class="inline-flex items-center text-secondary-blue font-medium hover:text-primary-blue transition-colors">
+                            閱讀更多
+                            <svg class="ml-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- 文章 3 -->
+                <article class="bg-gray-50 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="h-48 bg-gradient-to-br from-purple-500 to-purple-700">
+                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="IP Strategy" 
+                             class="w-full h-full object-cover opacity-30">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-primary-blue mb-3">智慧財產權保護策略</h3>
+                        <p class="text-gray-600 leading-relaxed mb-4">如何有效保護您的智慧財產權，從申請程序到侵權救濟的完整指南。</p>
+                        <a href="#" class="inline-flex items-center text-secondary-blue font-medium hover:text-primary-blue transition-colors">
+                            閱讀更多
+                            <svg class="ml-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="legal-knowledge-tailwind.html" class="inline-flex items-center bg-primary-blue hover:bg-dark-blue text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105">
+                    瀏覽更多文章
+                    <svg class="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 頁尾 -->
+    <footer class="bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">張德謙律師事務所</h3>
+                    <p class="text-gray-300 leading-relaxed mb-4">專業法律服務，值得您的信賴</p>
+                    <p class="text-gray-400 text-sm">成立於2004年，為您提供二十年專業法律服務經驗</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-white">聯絡方式</h4>
+                    <div class="space-y-2 text-gray-300">
+                        <p class="flex items-center">
+                            <svg class="w-5 h-5 mr-3 text-secondary-blue" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                            </svg>
+                            (02) 2388-9999
+                        </p>
+                        <p class="flex items-start">
+                            <svg class="w-5 h-5 mr-3 mt-0.5 text-secondary-blue" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                            </svg>
+                            台北市中正區重慶南路一段122號8樓
+                        </p>
+                        <p class="flex items-center">
+                            <svg class="w-5 h-5 mr-3 text-secondary-blue" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                            </svg>
+                            info@changlaw.com.tw
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-white">服務時間</h4>
+                    <div class="space-y-2 text-gray-300">
+                        <p>週一至週五：09:00-18:00</p>
+                        <p>週六：09:00-12:00</p>
+                        <p class="text-secondary-blue">緊急案件：24小時服務</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2024 張德謙律師事務所. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LINE 按鈕 -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <button onclick="openLineChat()" class="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110 animate-pulse-slow">
+            <svg class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12.017.572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
+            </svg>
+        </button>
+    </div>
+
+    <!-- 預約諮詢 Modal -->
+    <div id="appointment-modal" class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-2xl p-8 max-w-md w-full mx-4 transform transition-all duration-300">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-bold text-primary-blue">預約法律諮詢</h3>
+                <button onclick="closeAppointmentModal()" class="text-gray-400 hover:text-gray-600 text-2xl">×</button>
+            </div>
+            <form id="appointment-form" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">姓名</label>
+                    <input type="text" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary-blue focus:border-secondary-blue transition-colors">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">聯絡電話</label>
+                    <input type="tel" name="phone" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary-blue focus:border-secondary-blue transition-colors">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">電子郵件</label>
+                    <input type="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary-blue focus:border-secondary-blue transition-colors">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">案件類型</label>
+                    <select name="case-type" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary-blue focus:border-secondary-blue transition-colors">
+                        <option value="">請選擇</option>
+                        <option value="civil">民事訴訟</option>
+                        <option value="criminal">刑事辯護</option>
+                        <option value="corporate">公司法務</option>
+                        <option value="ip">智慧財產權</option>
+                        <option value="real-estate">房地產法律</option>
+                        <option value="family">家事法律</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">案件說明</label>
+                    <textarea name="message" rows="4" placeholder="請簡述您的法律問題..." class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary-blue focus:border-secondary-blue transition-colors"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-secondary-blue hover:bg-primary-blue text-white py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
+                    提交預約
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // 手機版選單切換
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // 預約 Modal
+        function openAppointmentModal() {
+            window.open('https://lin.ee/mI1u4Li', '_blank');
+        }
+        
+        function openAppointmentModalOld() {
+            document.getElementById('appointment-modal').classList.remove('hidden');
+        }
+
+        function closeAppointmentModal() {
+            document.getElementById('appointment-modal').classList.add('hidden');
+        }
+
+        // 服務項目諮詢
+        function openConsultModal(serviceType) {
+            window.open('https://lin.ee/mI1u4Li', '_blank');
+            const select = document.querySelector('select[name="case-type"]');
+            const mapping = {
+                '民事訴訟': 'civil',
+                '刑事辯護': 'criminal',
+                '公司法務': 'corporate',
+                '智慧財產權': 'ip',
+                '房地產法律': 'real-estate',
+                '家事法律': 'family'
+            };
+            if (mapping[serviceType]) {
+                select.value = mapping[serviceType];
+            }
+        }
+
+        // LINE 聊天
+        function openLineChat() {
+            // 這裡可以放置實際的 LINE 連結或顯示聯絡資訊
+            window.open('https://lin.ee/mI1u4Li', '_blank');
+        }
+
+        // 表單提交
+        document.getElementById('appointment-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('感謝您的預約！我們會盡快與您聯絡。');
+            closeAppointmentModal();
+            this.reset();
+        });
+
+        // 數字計數動畫
+        function animateCounter(element, target, duration = 2000) {
+            const start = 0;
+            const startTime = performance.now();
+            
+            function updateCounter(currentTime) {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                const current = Math.floor(start + (target - start) * progress);
+                
+                element.textContent = current;
+                
+                if (progress < 1) {
+                    requestAnimationFrame(updateCounter);
+                }
+            }
+            
+            requestAnimationFrame(updateCounter);
+        }
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    if (entry.target.id === 'cases-count') {
+                        animateCounter(entry.target, 500);
+                    } else if (entry.target.id === 'satisfaction-count') {
+                        animateCounter(entry.target, 98);
+                    } else if (entry.target.id === 'experience-count') {
+                        animateCounter(entry.target, 20);
+                    } else if (entry.target.id === 'amount-count') {
+                        animateCounter(entry.target, 15);
+                    }
+                }
+            });
+        }, observerOptions);
+
+        // 觀察統計數字
+        ['cases-count', 'satisfaction-count', 'experience-count', 'amount-count'].forEach(id => {
+            const element = document.getElementById(id);
+            if (element) observer.observe(element);
+        });
+
+        // 平滑滾動
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 80;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // 導航欄滾動效果
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-white/98');
+                nav.classList.remove('bg-white/95');
+            } else {
+                nav.classList.add('bg-white/95');
+                nav.classList.remove('bg-white/98');
+            }
+        });
+    </script>
+</body>
+</html>

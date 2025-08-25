@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>法律知識 - 張德謙律師事務所</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'law-blue': '#1e3a8a',
+                        'law-gold': '#d4af37',
+                        'law-gray': '#374151',
+                        'law-light': '#f8fafc'
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.6s ease-in-out',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                        'scale-hover': 'scaleHover 0.3s ease-in-out'
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(30px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' }
+                        },
+                        scaleHover: {
+                            '0%': { transform: 'scale(1)' },
+                            '100%': { transform: 'scale(1.05)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-gradient-to-br from-law-blue to-blue-800 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-balance-scale text-white text-lg"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-law-blue">張德謙律師事務所</h1>
+                        <p class="text-xs text-gray-600">Chang De-Qian Law Firm</p>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index-tailwind.html" class="text-gray-700 hover:text-law-blue transition duration-300">首頁</a>
+                    <a href="services-tailwind.html" class="text-gray-700 hover:text-law-blue transition duration-300">服務項目</a>
+                    <a href="about-lawyer-tailwind.html" class="text-gray-700 hover:text-law-blue transition duration-300">關於律師</a>
+                    <a href="about-firm-tailwind.html" class="text-gray-700 hover:text-law-blue transition duration-300">關於事務所</a>
+                    <a href="legal-knowledge-tailwind.html" class="text-law-blue font-semibold">法律知識</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="https://lin.ee/mI1u4Li" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition duration-300 flex items-center space-x-2">
+                        <i class="fab fa-line"></i>
+                        <span>LINE諮詢</span>
+                    </a>
+                    <button onclick="openAppointmentModal()" class="bg-law-blue hover:bg-blue-800 text-white px-4 py-2 rounded-lg transition duration-300">
+                        立即預約
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-20 pb-16 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-law-blue/90 to-blue-900/80"></div>
+        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');"></div>
+        <div class="relative container mx-auto px-4">
+            <div class="text-center animate-fade-in">
+                <h1 class="text-4xl lg:text-6xl font-bold text-white mb-6">
+                    法律知識中心
+                    <span class="block text-law-gold text-2xl lg:text-3xl mt-2">Legal Knowledge Center</span>
+                </h1>
+                <p class="text-xl text-gray-200 mb-8 leading-relaxed max-w-3xl mx-auto">
+                    提供實用的法律知識與專業見解，幫助您了解法律，保護自身權益<br>
+                    掌握法律常識，讓法律成為您生活中的守護者
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button onclick="openAppointmentModal()" class="bg-law-gold hover:bg-yellow-600 text-white px-8 py-3 rounded-lg text-lg font-semibold transition duration-300 transform hover:scale-105">
+                        免費諮詢
+                    </button>
+                    <a href="#articles" class="border-2 border-white text-white hover:bg-white hover:text-law-blue px-8 py-3 rounded-lg text-lg font-semibold transition duration-300 transform hover:scale-105">
+                        閱讀文章
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 animate-fade-in">
+                <h2 class="text-3xl font-bold text-law-blue mb-4">熱門法律主題</h2>
+                <p class="text-gray-600">快速找到您需要的法律知識</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-gradient-to-br from-law-blue to-blue-800 text-white p-6 rounded-2xl hover:shadow-xl transition duration-300 cursor-pointer animate-slide-up" onclick="scrollToSection('civil-law')">
+                    <i class="fas fa-gavel text-3xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">民事法律</h3>
+                    <p class="text-blue-200">契約糾紛、損害賠償、財產糾紛</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-red-600 to-red-800 text-white p-6 rounded-2xl hover:shadow-xl transition duration-300 cursor-pointer animate-slide-up" onclick="scrollToSection('criminal-law')">
+                    <i class="fas fa-shield-alt text-3xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">刑事法律</h3>
+                    <p class="text-red-200">刑事程序、罪名認定、刑責範圍</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-green-600 to-green-800 text-white p-6 rounded-2xl hover:shadow-xl transition duration-300 cursor-pointer animate-slide-up" onclick="scrollToSection('corporate-law')">
+                    <i class="fas fa-building text-3xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">企業法律</h3>
+                    <p class="text-green-200">公司設立、勞資關係、商業契約</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-purple-600 to-purple-800 text-white p-6 rounded-2xl hover:shadow-xl transition duration-300 cursor-pointer animate-slide-up" onclick="scrollToSection('family-law')">
+                    <i class="fas fa-home text-3xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">家事法律</h3>
+                    <p class="text-purple-200">婚姻關係、親權監護、遺產繼承</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Articles -->
+    <section id="articles" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 animate-fade-in">
+                <h2 class="text-4xl font-bold text-law-blue mb-6">精選法律文章</h2>
+                <p class="text-xl text-gray-600">深度解析重要法律議題</p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden animate-slide-up">
+                    <div class="h-48 bg-gradient-to-br from-law-blue to-blue-800 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="契約法律" class="w-full h-full object-cover opacity-20">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-file-contract text-white text-4xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-law-blue/10 text-law-blue px-3 py-1 rounded-full text-sm font-medium">民事法律</span>
+                            <span class="text-gray-500 text-sm ml-auto">2024-08-20</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-law-blue mb-3">如何保護您的契約權益</h3>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            在日常生活中，我們經常需要簽訂各種契約。了解契約的基本要素和注意事項，能夠有效保護您的權益...
+                        </p>
+                        <button class="text-law-blue font-semibold hover:text-blue-800 transition duration-300">
+                            閱讀更多 <i class="fas fa-arrow-right ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden animate-slide-up">
+                    <div class="h-48 bg-gradient-to-br from-green-600 to-green-800 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="勞工權益" class="w-full h-full object-cover opacity-20">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-users text-white text-4xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">勞動法律</span>
+                            <span class="text-gray-500 text-sm ml-auto">2024-08-18</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-law-blue mb-3">勞工權益保護完整指南</h3>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            了解您在職場上的基本權益，包括工資、工時、休假等重要權利，以及遇到勞資爭議時的處理方式...
+                        </p>
+                        <button class="text-law-blue font-semibold hover:text-blue-800 transition duration-300">
+                            閱讀更多 <i class="fas fa-arrow-right ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden animate-slide-up">
+                    <div class="h-48 bg-gradient-to-br from-purple-600 to-purple-800 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="房地產法律" class="w-full h-full object-cover opacity-20">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-home text-white text-4xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">房地產法</span>
+                            <span class="text-gray-500 text-sm ml-auto">2024-08-15</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-law-blue mb-3">買房必知的法律事項</h3>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            購買房屋是人生大事，了解相關法律規定和注意事項，能夠避免日後產生糾紛，保障您的投資...
+                        </p>
+                        <button class="text-law-blue font-semibold hover:text-blue-800 transition duration-300">
+                            閱讀更多 <i class="fas fa-arrow-right ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legal Categories -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 animate-fade-in">
+                <h2 class="text-4xl font-bold text-law-blue mb-6">法律知識分類</h2>
+                <p class="text-xl text-gray-600">依照不同領域分類的法律知識</p>
+            </div>
+
+            <!-- Civil Law -->
+            <section id="civil-law" class="mb-20">
+                <div class="max-w-6xl mx-auto">
+                    <div class="grid lg:grid-cols-2 gap-12 items-center mb-12">
+                        <div class="animate-slide-up">
+                            <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="民事法律" class="w-full h-64 object-cover rounded-2xl shadow-lg">
+                        </div>
+                        <div class="animate-slide-up">
+                            <h3 class="text-3xl font-bold text-law-blue mb-6">民事法律知識</h3>
+                            <p class="text-gray-600 leading-relaxed mb-6">
+                                民事法律涉及個人與個人、個人與法人之間的權利義務關係。包含契約法、侵權行為法、物權法等重要領域。
+                            </p>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div class="bg-law-blue/5 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-law-blue mb-2">契約糾紛</h4>
+                                    <p class="text-sm text-gray-600">買賣、租賃、承攬等契約的成立與履行</p>
+                                </div>
+                                <div class="bg-law-blue/5 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-law-blue mb-2">侵權賠償</h4>
+                                    <p class="text-sm text-gray-600">車禍、醫療疏失、名譽權侵害等賠償</p>
+                                </div>
+                                <div class="bg-law-blue/5 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-law-blue mb-2">債權債務</h4>
+                                    <p class="text-sm text-gray-600">借款關係、保證責任、債務清償</p>
+                                </div>
+                                <div class="bg-law-blue/5 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-law-blue mb-2">物權糾紛</h4>
+                                    <p class="text-sm text-gray-600">不動產買賣、抵押權設定、所有權爭議</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Criminal Law -->
+            <section id="criminal-law" class="mb-20">
+                <div class="max-w-6xl mx-auto">
+                    <div class="grid lg:grid-cols-2 gap-12 items-center mb-12">
+                        <div class="lg:order-2 animate-slide-up">
+                            <img src="https://images.unsplash.com/photo-1436450412740-6b988f486c6b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="刑事法律" class="w-full h-64 object-cover rounded-2xl shadow-lg">
+                        </div>
+                        <div class="animate-slide-up">
+                            <h3 class="text-3xl font-bold text-law-blue mb-6">刑事法律知識</h3>
+                            <p class="text-gray-600 leading-relaxed mb-6">
+                                刑事法律規範犯罪行為及其後果，保護社會秩序與個人權益。了解刑事程序和基本權利，是每位公民應具備的法律素養。
+                            </p>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div class="bg-red-50 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-red-800 mb-2">刑事程序</h4>
+                                    <p class="text-sm text-gray-600">起訴、審判、上訴等程序權利</p>
+                                </div>
+                                <div class="bg-red-50 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-red-800 mb-2">犯罪構成</h4>
+                                    <p class="text-sm text-gray-600">各種犯罪的構成要件和刑責範圍</p>
+                                </div>
+                                <div class="bg-red-50 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-red-800 mb-2">辯護權利</h4>
+                                    <p class="text-sm text-gray-600">選任辯護人、緘默權等基本權利</p>
+                                </div>
+                                <div class="bg-red-50 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-red-800 mb-2">刑罰執行</h4>
+                                    <p class="text-sm text-gray-600">有期徒刑、罰金、緩刑等執行方式</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Corporate Law -->
+            <section id="corporate-law" class="mb-20">
+                <div class="max-w-6xl mx-auto">
+                    <div class="grid lg:grid-cols-2 gap-12 items-center mb-12">
+                        <div class="animate-slide-up">
+                            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="企業法律" class="w-full h-64 object-cover rounded-2xl shadow-lg">
+                        </div>
+                        <div class="animate-slide-up">
+                            <h3 class="text-3xl font-bold text-law-blue mb-6">企業法律知識</h3>
+                            <p class="text-gray-600 leading-relaxed mb-6">
+                                企業經營涉及眾多法律規範，從公司設立到日常營運，都需要遵守相關法令。掌握企業法律知識，有助於合規經營和風險控管。
+                            </p>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div class="bg-green-50 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-green-800 mb-2">公司法務</h4>
+                                    <p class="text-sm text-gray-600">公司設立、股東權利、董事責任</p>
+                                </div>
+                                <div class="bg-green-50 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-green-800 mb-2">勞動法規</h4>
+                                    <p class="text-sm text-gray-600">勞動契約、工時規定、職場安全</p>
+                                </div>
+                                <div class="bg-green-50 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-green-800 mb-2">智慧財產</h4>
+                                    <p class="text-sm text-gray-600">商標、專利、營業秘密保護</p>
+                                </div>
+                                <div class="bg-green-50 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-green-800 mb-2">稅務法規</h4>
+                                    <p class="text-sm text-gray-600">營業稅、所得稅、稅務優惠規定</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Family Law -->
+            <section id="family-law">
+                <div class="max-w-6xl mx-auto">
+                    <div class="grid lg:grid-cols-2 gap-12 items-center mb-12">
+                        <div class="lg:order-2 animate-slide-up">
+                            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="家事法律" class="w-full h-64 object-cover rounded-2xl shadow-lg">
+                        </div>
+                        <div class="animate-slide-up">
+                            <h3 class="text-3xl font-bold text-law-blue mb-6">家事法律知識</h3>
+                            <p class="text-gray-600 leading-relaxed mb-6">
+                                家事法律關係到每個家庭的重要權益，從結婚、離婚到遺產繼承，都有相關法律規範。了解這些知識，能夠更好地保護家庭成員的權益。
+                            </p>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div class="bg-purple-50 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-purple-800 mb-2">婚姻關係</h4>
+                                    <p class="text-sm text-gray-600">結婚要件、夫妻財產制、離婚程序</p>
+                                </div>
+                                <div class="bg-purple-50 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-purple-800 mb-2">親權監護</h4>
+                                    <p class="text-sm text-gray-600">子女監護權、探視權、扶養義務</p>
+                                </div>
+                                <div class="bg-purple-50 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-purple-800 mb-2">遺產繼承</h4>
+                                    <p class="text-sm text-gray-600">法定繼承、遺囑效力、遺產分割</p>
+                                </div>
+                                <div class="bg-purple-50 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-purple-800 mb-2">家暴防治</h4>
+                                    <p class="text-sm text-gray-600">保護令申請、被害人權益保護</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <!-- Legal Tips -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 animate-fade-in">
+                <h2 class="text-4xl font-bold text-law-blue mb-6">實用法律小貼士</h2>
+                <p class="text-xl text-gray-600">日常生活中的法律注意事項</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 animate-slide-up">
+                    <div class="w-12 h-12 bg-law-blue/10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-file-signature text-law-blue text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-law-blue mb-4">簽約前必做</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        仔細閱讀契約條款，確認重要細節如價格、履行期限、違約條款等，必要時可請律師協助審閱。
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 animate-slide-up">
+                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-camera text-green-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-law-blue mb-4">保存證據</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        發生糾紛時，完整的證據是維護權益的關鍵。記得保存相關文件、照片、通訊記錄等。
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 animate-slide-up">
+                    <div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-clock text-yellow-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-law-blue mb-4">注意時效</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        法律行為都有時效限制，如訴訟時效、申請期限等。及早採取行動，避免權利消滅。
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 animate-slide-up">
+                    <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-balance-scale text-purple-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-law-blue mb-4">專業諮詢</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        面對複雜的法律問題，建議尋求專業律師協助，避免因不了解法律而損害自身權益。
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 animate-slide-up">
+                    <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-exclamation-triangle text-red-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-law-blue mb-4">預防勝於治療</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        事前預防比事後救濟更重要。建立良好的法律意識，能夠有效降低糾紛發生的機會。
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 animate-slide-up">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-comments text-blue-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-law-blue mb-4">協商優先</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        遇到糾紛時，優先考慮協商解決。協商成本較低，也能維持良好關係，是雙贏的選擇。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 animate-fade-in">
+                <h2 class="text-4xl font-bold text-law-blue mb-6">常見法律問題</h2>
+                <p class="text-xl text-gray-600">為您解答最常遇到的法律疑問</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="space-y-4">
+                    <div class="bg-white border border-gray-200 rounded-xl shadow-sm animate-slide-up">
+                        <button class="w-full text-left p-6 focus:outline-none" onclick="toggleFAQ(this)">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-lg font-semibold text-law-blue">契約可以口頭約定嗎？</h3>
+                                <i class="fas fa-chevron-down text-gray-400 transform transition-transform duration-200"></i>
+                            </div>
+                        </button>
+                        <div class="hidden p-6 pt-0 border-t border-gray-100">
+                            <p class="text-gray-600 leading-relaxed">
+                                根據民法規定，口頭契約在法律上是有效的，但為了避免日後產生爭議，重要的契約建議採用書面形式。書面契約能夠清楚記載雙方的權利義務，在發生糾紛時也較容易舉證。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white border border-gray-200 rounded-xl shadow-sm animate-slide-up">
+                        <button class="w-full text-left p-6 focus:outline-none" onclick="toggleFAQ(this)">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-lg font-semibold text-law-blue">被告上法院該怎麼辦？</h3>
+                                <i class="fas fa-chevron-down text-gray-400 transform transition-transform duration-200"></i>
+                            </div>
+                        </button>
+                        <div class="hidden p-6 pt-0 border-t border-gray-100">
+                            <p class="text-gray-600 leading-relaxed">
+                                收到起訴書後，應立即尋求專業律師協助。在法定期限內提出答辯書，準備相關證據，並出席開庭。切勿置之不理，否則可能面臨敗訴的風險。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white border border-gray-200 rounded-xl shadow-sm animate-slide-up">
+                        <button class="w-full text-left p-6 focus:outline-none" onclick="toggleFAQ(this)">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-lg font-semibold text-law-blue">勞工可以拒絕加班嗎？</h3>
+                                <i class="fas fa-chevron-down text-gray-400 transform transition-transform duration-200"></i>
+                            </div>
+                        </button>
+                        <div class="hidden p-6 pt-0 border-t border-gray-100">
+                            <p class="text-gray-600 leading-relaxed">
+                                根據勞動基準法，雇主要求加班必須經勞工同意，勞工有權拒絕不合理的加班要求。但如果是緊急情況或為避免災害，雇主可要求勞工加班，事後應給予補償。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white border border-gray-200 rounded-xl shadow-sm animate-slide-up">
+                        <button class="w-full text-left p-6 focus:outline-none" onclick="toggleFAQ(this)">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-lg font-semibold text-law-blue">離婚時財產如何分配？</h3>
+                                <i class="fas fa-chevron-down text-gray-400 transform transition-transform duration-200"></i>
+                            </div>
+                        </button>
+                        <div class="hidden p-6 pt-0 border-t border-gray-100">
+                            <p class="text-gray-600 leading-relaxed">
+                                財產分配取決於夫妻財產制。如採法定財產制，婚前財產歸各自所有，婚後財產原則上平均分配。如有約定財產制，則按約定處理。建議諮詢專業律師了解詳細規定。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white border border-gray-200 rounded-xl shadow-sm animate-slide-up">
+                        <button class="w-full text-left p-6 focus:outline-none" onclick="toggleFAQ(this)">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-lg font-semibold text-law-blue">遺產繼承有時間限制嗎？</h3>
+                                <i class="fas fa-chevron-down text-gray-400 transform transition-transform duration-200"></i>
+                            </div>
+                        </button>
+                        <div class="hidden p-6 pt-0 border-t border-gray-100">
+                            <p class="text-gray-600 leading-relaxed">
+                                繼承人應在知道有繼承權後3個月內，決定是否接受繼承。如要拋棄繼承，必須向法院聲請。超過期限未聲請拋棄者，視為接受繼承，需承擔被繼承人的債務。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="py-20 bg-gradient-to-r from-law-blue to-blue-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center animate-fade-in">
+                <h2 class="text-4xl font-bold text-white mb-6">還有其他法律問題嗎？</h2>
+                <p class="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
+                    我們的專業律師團隊隨時為您提供專業的法律諮詢服務
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button onclick="openAppointmentModal()" class="bg-law-gold hover:bg-yellow-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition duration-300 transform hover:scale-105">
+                        <i class="fas fa-calendar-plus mr-2"></i>
+                        預約諮詢
+                    </button>
+                    <a href="https://lin.ee/mI1u4Li" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition duration-300 transform hover:scale-105">
+                        <i class="fab fa-line mr-2"></i>
+                        LINE 諮詢
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-law-blue to-blue-800 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-balance-scale text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold">張德謙律師事務所</h3>
+                            <p class="text-sm text-gray-400">Chang De-Qian Law Firm</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        專業、誠信、負責任的法律服務，守護您的權益。
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">服務項目</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="services-tailwind.html#civil" class="hover:text-white transition duration-300">民事訴訟</a></li>
+                        <li><a href="services-tailwind.html#criminal" class="hover:text-white transition duration-300">刑事辯護</a></li>
+                        <li><a href="services-tailwind.html#corporate" class="hover:text-white transition duration-300">企業法律顧問</a></li>
+                        <li><a href="services-tailwind.html" class="hover:text-white transition duration-300">查看所有服務</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">快速連結</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="index-tailwind.html" class="hover:text-white transition duration-300">首頁</a></li>
+                        <li><a href="about-lawyer-tailwind.html" class="hover:text-white transition duration-300">關於律師</a></li>
+                        <li><a href="about-firm-tailwind.html" class="hover:text-white transition duration-300">關於事務所</a></li>
+                        <li><a href="#" onclick="openAppointmentModal()" class="hover:text-white transition duration-300">預約諮詢</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">聯絡資訊</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-phone w-4"></i>
+                            <span>(02) 2345-6789</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-envelope w-4"></i>
+                            <span>info@changlaw.com</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-map-marker-alt w-4"></i>
+                            <span>台北市信義區信義路五段7號</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fab fa-line w-4"></i>
+                            <span>@changlaw</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
+                <p>&copy; 2024 張德謙律師事務所. 版權所有.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Appointment Modal -->
+    <div id="appointmentModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="bg-white rounded-2xl max-w-md w-full p-8 relative animate-slide-up">
+                <button onclick="closeAppointmentModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+                
+                <h3 class="text-2xl font-bold text-law-blue mb-6 text-center">預約法律諮詢</h3>
+                
+                <form id="appointmentForm">
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">姓名</label>
+                            <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-law-blue focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">電話</label>
+                            <input type="tel" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-law-blue focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">諮詢類型</label>
+                            <select required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-law-blue focus:border-transparent">
+                                <option value="">請選擇諮詢類型</option>
+                                <option value="civil">民事訴訟</option>
+                                <option value="criminal">刑事辯護</option>
+                                <option value="corporate">企業法律</option>
+                                <option value="family">家事法律</option>
+                                <option value="real-estate">房地產法律</option>
+                                <option value="ip">智慧財產權</option>
+                                <option value="other">其他</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">希望諮詢時間</label>
+                            <input type="datetime-local" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-law-blue focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">簡述法律問題</label>
+                            <textarea rows="4" placeholder="請簡單描述您的法律問題..." class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-law-blue focus:border-transparent resize-none"></textarea>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-law-blue hover:bg-blue-800 text-white py-3 rounded-lg font-semibold mt-6 transition duration-300">
+                        送出預約申請
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openAppointmentModal() {
+            window.open('https://lin.ee/mI1u4Li', '_blank');
+        }
+        
+        function closeAppointmentModal() {
+            document.getElementById('appointmentModal').classList.add('hidden');
+        }
+        
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+        
+        function toggleFAQ(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                content.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+        
+        document.getElementById('appointmentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('預約申請已送出！我們會盡快與您聯繫確認諮詢時間。');
+            closeAppointmentModal();
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatedElements = document.querySelectorAll('.animate-slide-up, .animate-fade-in');
+            animatedElements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

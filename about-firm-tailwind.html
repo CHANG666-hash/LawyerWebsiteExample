@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>關於事務所 - 張德謙律師事務所</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'law-blue': '#1e3a8a',
+                        'law-gold': '#d4af37',
+                        'law-gray': '#374151',
+                        'law-light': '#f8fafc'
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.6s ease-in-out',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                        'scale-hover': 'scaleHover 0.3s ease-in-out'
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(30px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' }
+                        },
+                        scaleHover: {
+                            '0%': { transform: 'scale(1)' },
+                            '100%': { transform: 'scale(1.05)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-gradient-to-br from-law-blue to-blue-800 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-balance-scale text-white text-lg"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-law-blue">張德謙律師事務所</h1>
+                        <p class="text-xs text-gray-600">Chang De-Qian Law Firm</p>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index-tailwind.html" class="text-gray-700 hover:text-law-blue transition duration-300">首頁</a>
+                    <a href="services-tailwind.html" class="text-gray-700 hover:text-law-blue transition duration-300">服務項目</a>
+                    <a href="about-lawyer-tailwind.html" class="text-gray-700 hover:text-law-blue transition duration-300">關於律師</a>
+                    <a href="about-firm-tailwind.html" class="text-law-blue font-semibold">關於事務所</a>
+                    <a href="legal-knowledge-tailwind.html" class="text-gray-700 hover:text-law-blue transition duration-300">法律知識</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="https://lin.ee/mI1u4Li" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition duration-300 flex items-center space-x-2">
+                        <i class="fab fa-line"></i>
+                        <span>LINE諮詢</span>
+                    </a>
+                    <button onclick="openAppointmentModal()" class="bg-law-blue hover:bg-blue-800 text-white px-4 py-2 rounded-lg transition duration-300">
+                        立即預約
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-20 pb-16 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-law-blue/90 to-blue-900/80"></div>
+        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');"></div>
+        <div class="relative container mx-auto px-4">
+            <div class="text-center animate-fade-in">
+                <h1 class="text-4xl lg:text-6xl font-bold text-white mb-6">
+                    張德謙律師事務所
+                    <span class="block text-law-gold text-2xl lg:text-3xl mt-2">Chang De-Qian Law Firm</span>
+                </h1>
+                <p class="text-xl text-gray-200 mb-8 leading-relaxed max-w-3xl mx-auto">
+                    成立於2015年，我們致力於提供最專業、最優質的法律服務<br>
+                    以誠信、專業、創新的理念，成為您最信賴的法律夥伴
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button onclick="openAppointmentModal()" class="bg-law-gold hover:bg-yellow-600 text-white px-8 py-3 rounded-lg text-lg font-semibold transition duration-300 transform hover:scale-105">
+                        聯繫我們
+                    </button>
+                    <a href="#history" class="border-2 border-white text-white hover:bg-white hover:text-law-blue px-8 py-3 rounded-lg text-lg font-semibold transition duration-300 transform hover:scale-105">
+                        了解更多
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Firm Stats -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="animate-slide-up">
+                    <div class="text-4xl font-bold text-law-blue mb-2">2015</div>
+                    <p class="text-gray-600">成立年份</p>
+                </div>
+                <div class="animate-slide-up">
+                    <div class="text-4xl font-bold text-law-blue mb-2">1000+</div>
+                    <p class="text-gray-600">服務客戶</p>
+                </div>
+                <div class="animate-slide-up">
+                    <div class="text-4xl font-bold text-law-blue mb-2">95%</div>
+                    <p class="text-gray-600">勝訴率</p>
+                </div>
+                <div class="animate-slide-up">
+                    <div class="text-4xl font-bold text-law-blue mb-2">24/7</div>
+                    <p class="text-gray-600">全天候服務</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Firm History -->
+    <section id="history" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 animate-fade-in">
+                <h2 class="text-4xl font-bold text-law-blue mb-6">事務所歷史</h2>
+                <p class="text-xl text-gray-600">從創立至今，我們不斷成長茁壯</p>
+            </div>
+
+            <div class="max-w-6xl mx-auto">
+                <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+                    <div class="animate-slide-up">
+                        <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="事務所成立" class="w-full h-64 object-cover rounded-2xl shadow-lg">
+                    </div>
+                    <div class="animate-slide-up">
+                        <h3 class="text-3xl font-bold text-law-blue mb-6">創立初衷</h3>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            張德謙律師於2015年創立事務所，秉持著「讓法律服務更親民、更專業」的理念。我們深信每個人都應該享有優質的法律服務，不論案件大小，都值得被認真對待。
+                        </p>
+                        <p class="text-gray-600 leading-relaxed">
+                            從最初的個人執業，到如今的專業團隊，我們始終堅持以客戶利益為優先，提供最誠信、最專業的法律服務。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl shadow-xl p-12 animate-slide-up">
+                    <h3 class="text-3xl font-bold text-law-blue mb-8 text-center">發展歷程</h3>
+                    <div class="space-y-8">
+                        <div class="flex flex-col md:flex-row md:items-center border-l-4 border-law-blue pl-8">
+                            <div class="mb-4 md:mb-0 md:w-32 flex-shrink-0">
+                                <span class="bg-law-blue text-white px-4 py-2 rounded-full font-semibold">2015</span>
+                            </div>
+                            <div class="flex-grow">
+                                <h4 class="text-xl font-bold text-law-blue mb-2">事務所成立</h4>
+                                <p class="text-gray-600">張德謙律師正式成立個人律師事務所，開始提供專業法律服務。</p>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col md:flex-row md:items-center border-l-4 border-law-gold pl-8">
+                            <div class="mb-4 md:mb-0 md:w-32 flex-shrink-0">
+                                <span class="bg-law-gold text-white px-4 py-2 rounded-full font-semibold">2017</span>
+                            </div>
+                            <div class="flex-grow">
+                                <h4 class="text-xl font-bold text-law-blue mb-2">團隊擴大</h4>
+                                <p class="text-gray-600">增聘資深律師及法務專員，建立專業法律服務團隊。</p>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col md:flex-row md:items-center border-l-4 border-green-500 pl-8">
+                            <div class="mb-4 md:mb-0 md:w-32 flex-shrink-0">
+                                <span class="bg-green-500 text-white px-4 py-2 rounded-full font-semibold">2020</span>
+                            </div>
+                            <div class="flex-grow">
+                                <h4 class="text-xl font-bold text-law-blue mb-2">服務創新</h4>
+                                <p class="text-gray-600">導入線上諮詢服務，提供更便利的法律諮詢管道。</p>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col md:flex-row md:items-center border-l-4 border-purple-500 pl-8">
+                            <div class="mb-4 md:mb-0 md:w-32 flex-shrink-0">
+                                <span class="bg-purple-500 text-white px-4 py-2 rounded-full font-semibold">2024</span>
+                            </div>
+                            <div class="flex-grow">
+                                <h4 class="text-xl font-bold text-law-blue mb-2">持續成長</h4>
+                                <p class="text-gray-600">服務客戶超過1000家，成為台北地區知名律師事務所。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16 animate-fade-in">
+                    <h2 class="text-4xl font-bold text-law-blue mb-6">使命與願景</h2>
+                    <p class="text-xl text-gray-600">我們的核心價值與未來目標</p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <div class="bg-gradient-to-br from-law-blue/5 to-blue-50 p-12 rounded-3xl border border-law-blue/10 animate-slide-up">
+                        <div class="text-center mb-8">
+                            <div class="w-16 h-16 bg-law-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-bullseye text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-3xl font-bold text-law-blue mb-4">我們的使命</h3>
+                        </div>
+                        <p class="text-gray-700 leading-relaxed text-lg text-center">
+                            為每位客戶提供最專業、最誠信的法律服務，以豐富的經驗和深厚的法律知識，保障客戶的合法權益，協助客戶解決法律問題，成為客戶最信賴的法律夥伴。
+                        </p>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-law-gold/5 to-yellow-50 p-12 rounded-3xl border border-law-gold/20 animate-slide-up">
+                        <div class="text-center mb-8">
+                            <div class="w-16 h-16 bg-law-gold rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-eye text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-3xl font-bold text-law-blue mb-4">我們的願景</h3>
+                        </div>
+                        <p class="text-gray-700 leading-relaxed text-lg text-center">
+                            成為台灣最受信賴的律師事務所之一，透過創新的服務模式和卓越的專業能力，讓法律服務更加親民化，為社會正義貢獻一份力量。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 animate-fade-in">
+                <h2 class="text-4xl font-bold text-law-blue mb-6">核心價值</h2>
+                <p class="text-xl text-gray-600">堅持以下價值，提供最優質的法律服務</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 text-center animate-slide-up">
+                    <div class="w-16 h-16 bg-law-blue/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-handshake text-law-blue text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-law-blue mb-4">誠信正直</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        以誠待人，秉持正直的品格，為每位客戶提供最真誠的法律建議。
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 text-center animate-slide-up">
+                    <div class="w-16 h-16 bg-law-gold/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-star text-law-gold text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-law-blue mb-4">專業卓越</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        持續精進專業知識，提供最高品質的法律服務和解決方案。
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 text-center animate-slide-up">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-heart text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-law-blue mb-4">用心服務</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        用心傾聽客戶需求，提供個人化的法律服務和貼心關懷。
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 text-center animate-slide-up">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-lightbulb text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-law-blue mb-4">創新思維</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        運用創新的思維和方法，為客戶找到最佳的法律解決方案。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 animate-fade-in">
+                <h2 class="text-4xl font-bold text-law-blue mb-6">專業團隊</h2>
+                <p class="text-xl text-gray-600">經驗豐富的法律專業人員</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden animate-slide-up">
+                        <div class="h-64 bg-gradient-to-br from-law-blue to-blue-800 relative">
+                            <img src="張律師.png" alt="張德謙律師" class="w-full h-full object-cover object-top opacity-90">
+                        </div>
+                        <div class="p-6 text-center">
+                            <h3 class="text-xl font-bold text-law-blue mb-2">張德謙律師</h3>
+                            <p class="text-gray-600 mb-4">主持律師 / 創辦人</p>
+                            <p class="text-sm text-gray-500 leading-relaxed">
+                                台大法律系畢業，擁有15年豐富執業經驗，專精民事訴訟及企業法律顧問。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden animate-slide-up">
+                        <div class="h-64 bg-gradient-to-br from-law-gold to-yellow-600 relative">
+                            <img src="李律師.png" alt="資深律師" class="w-full h-full object-cover object-top opacity-80">
+                        </div>
+                        <div class="p-6 text-center">
+                            <h3 class="text-xl font-bold text-law-blue mb-2">李資深律師</h3>
+                            <p class="text-gray-600 mb-4">資深合夥律師</p>
+                            <p class="text-sm text-gray-500 leading-relaxed">
+                                政大法律系畢業，專精刑事辯護及家事法律，擁有豐富的訴訟經驗。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden animate-slide-up">
+                        <div class="h-64 bg-gradient-to-br from-green-600 to-green-800 relative">
+                            <img src="法務專員.png" alt="法務專員" class="w-full h-full object-cover object-top opacity-80">
+                        </div>
+                        <div class="p-6 text-center">
+                            <h3 class="text-xl font-bold text-law-blue mb-2">王法務專員</h3>
+                            <p class="text-gray-600 mb-4">資深法務專員</p>
+                            <p class="text-sm text-gray-500 leading-relaxed">
+                                東吳法律系畢業，專責案件管理及客戶服務，提供專業法律支援。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Office Location -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 animate-fade-in">
+                <h2 class="text-4xl font-bold text-law-blue mb-6">辦公環境</h2>
+                <p class="text-xl text-gray-600">舒適專業的辦公空間，提供最佳的服務體驗</p>
+            </div>
+
+            <div class="max-w-6xl mx-auto">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="animate-slide-up">
+                        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="辦公室環境" class="w-full h-80 object-cover rounded-2xl shadow-lg">
+                    </div>
+                    <div class="animate-slide-up">
+                        <h3 class="text-3xl font-bold text-law-blue mb-6">優質辦公環境</h3>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            本事務所位於台北市信義區核心地段，交通便利，環境優雅。辦公空間採用現代化設計，配備完善的會議室和諮詢室，為客戶提供舒適且隱私的諮詢環境。
+                        </p>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-law-blue/10 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-map-marker-alt text-law-blue"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-law-blue">地理位置</h4>
+                                    <p class="text-gray-600">台北市信義區信義路五段7號</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-law-blue/10 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-subway text-law-blue"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-law-blue">交通便利</h4>
+                                    <p class="text-gray-600">捷運市政府站步行3分鐘</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-law-blue/10 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-car text-law-blue"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-law-blue">停車便利</h4>
+                                    <p class="text-gray-600">提供免費停車位給預約客戶</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards & Recognition -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 animate-fade-in">
+                <h2 class="text-4xl font-bold text-law-blue mb-6">榮譽與認證</h2>
+                <p class="text-xl text-gray-600">專業能力獲得各界肯定</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-gradient-to-r from-law-blue/5 to-blue-50 p-8 rounded-2xl border border-law-blue/10 animate-slide-up">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 bg-law-gold rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-award text-white text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-law-blue">優秀律師獎</h3>
+                                <p class="text-gray-600">台北律師公會</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">
+                            2022年獲得台北律師公會頒發優秀律師獎，表彰在法律服務方面的卓越表現。
+                        </p>
+                    </div>
+
+                    <div class="bg-gradient-to-r from-green-50 to-green-100 p-8 rounded-2xl border border-green-200 animate-slide-up">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-certificate text-white text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-law-blue">專業認證</h3>
+                                <p class="text-gray-600">中華民國仲裁協會</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">
+                            取得仲裁人資格認證，具備處理商事仲裁案件的專業能力。
+                        </p>
+                    </div>
+
+                    <div class="bg-gradient-to-r from-purple-50 to-purple-100 p-8 rounded-2xl border border-purple-200 animate-slide-up">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-star text-white text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-law-blue">客戶滿意度</h3>
+                                <p class="text-gray-600">第三方調查機構</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">
+                            連續三年客戶滿意度調查獲得98%以上的高滿意度評價。
+                        </p>
+                    </div>
+
+                    <div class="bg-gradient-to-r from-orange-50 to-orange-100 p-8 rounded-2xl border border-orange-200 animate-slide-up">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-handshake text-white text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-law-blue">公益貢獻</h3>
+                                <p class="text-gray-600">法律扶助基金會</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">
+                            長期參與法律扶助工作，為弱勢族群提供免費法律服務。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="py-20 bg-gradient-to-r from-law-blue to-blue-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center animate-fade-in">
+                <h2 class="text-4xl font-bold text-white mb-6">選擇張德謙律師事務所</h2>
+                <p class="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
+                    專業、誠信、負責任的法律服務，讓我們成為您最信賴的法律夥伴
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button onclick="openAppointmentModal()" class="bg-law-gold hover:bg-yellow-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition duration-300 transform hover:scale-105">
+                        <i class="fas fa-calendar-plus mr-2"></i>
+                        立即預約諮詢
+                    </button>
+                    <a href="https://lin.ee/mI1u4Li" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition duration-300 transform hover:scale-105">
+                        <i class="fab fa-line mr-2"></i>
+                        LINE 諮詢
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-law-blue to-blue-800 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-balance-scale text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold">張德謙律師事務所</h3>
+                            <p class="text-sm text-gray-400">Chang De-Qian Law Firm</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        專業、誠信、負責任的法律服務，守護您的權益。
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">服務項目</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="services-tailwind.html#civil" class="hover:text-white transition duration-300">民事訴訟</a></li>
+                        <li><a href="services-tailwind.html#criminal" class="hover:text-white transition duration-300">刑事辯護</a></li>
+                        <li><a href="services-tailwind.html#corporate" class="hover:text-white transition duration-300">企業法律顧問</a></li>
+                        <li><a href="services-tailwind.html" class="hover:text-white transition duration-300">查看所有服務</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">快速連結</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="index-tailwind.html" class="hover:text-white transition duration-300">首頁</a></li>
+                        <li><a href="about-lawyer-tailwind.html" class="hover:text-white transition duration-300">關於律師</a></li>
+                        <li><a href="legal-knowledge-tailwind.html" class="hover:text-white transition duration-300">法律知識</a></li>
+                        <li><a href="#" onclick="openAppointmentModal()" class="hover:text-white transition duration-300">預約諮詢</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">聯絡資訊</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-phone w-4"></i>
+                            <span>(02) 2345-6789</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-envelope w-4"></i>
+                            <span>info@changlaw.com</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-map-marker-alt w-4"></i>
+                            <span>台北市信義區信義路五段7號</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fab fa-line w-4"></i>
+                            <span>@changlaw</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
+                <p>&copy; 2024 張德謙律師事務所. 版權所有.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Appointment Modal -->
+    <div id="appointmentModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="bg-white rounded-2xl max-w-md w-full p-8 relative animate-slide-up">
+                <button onclick="closeAppointmentModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+                
+                <h3 class="text-2xl font-bold text-law-blue mb-6 text-center">預約法律諮詢</h3>
+                
+                <form id="appointmentForm">
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">姓名</label>
+                            <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-law-blue focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">電話</label>
+                            <input type="tel" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-law-blue focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">諮詢類型</label>
+                            <select required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-law-blue focus:border-transparent">
+                                <option value="">請選擇諮詢類型</option>
+                                <option value="civil">民事訴訟</option>
+                                <option value="criminal">刑事辯護</option>
+                                <option value="corporate">企業法律</option>
+                                <option value="family">家事法律</option>
+                                <option value="real-estate">房地產法律</option>
+                                <option value="ip">智慧財產權</option>
+                                <option value="other">其他</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">希望諮詢時間</label>
+                            <input type="datetime-local" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-law-blue focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">簡述法律問題</label>
+                            <textarea rows="4" placeholder="請簡單描述您的法律問題..." class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-law-blue focus:border-transparent resize-none"></textarea>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-law-blue hover:bg-blue-800 text-white py-3 rounded-lg font-semibold mt-6 transition duration-300">
+                        送出預約申請
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openAppointmentModal() {
+            window.open('https://lin.ee/mI1u4Li', '_blank');
+        }
+        
+        function openAppointmentModalOld() {
+            document.getElementById('appointmentModal').classList.remove('hidden');
+        }
+        
+        function closeAppointmentModal() {
+            document.getElementById('appointmentModal').classList.add('hidden');
+        }
+        
+        document.getElementById('appointmentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('預約申請已送出！我們會盡快與您聯繫確認諮詢時間。');
+            closeAppointmentModal();
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatedElements = document.querySelectorAll('.animate-slide-up, .animate-fade-in');
+            animatedElements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
